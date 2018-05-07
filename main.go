@@ -66,7 +66,7 @@ func main() {
 	viper.AutomaticEnv()
 
 	configPFlag(rootCmd, "query", "prometheus_build_info{}", "the query")
-	configPFlag(rootCmd, "host",  "localhost:9090", "Prom cluster")
+	configPFlag(rootCmd, "host",  "http://localhost:9090", "Prom cluster")
 
 	if err := rootCmd.Execute(); err != nil {
 		fmt.Println(err)
